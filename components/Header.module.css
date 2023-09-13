@@ -6,13 +6,15 @@
 	transition: color 0.3s;
 	display: block;
 	margin: 1em;
-	padding: 1em 2em;
+	padding: .5em .75em;
 	border: none;
 	vertical-align: middle;
 	position: relative;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
+	border-radius: 10px;
+	text-align: center;
 }
 .navlink:focus {
 	outline: none;

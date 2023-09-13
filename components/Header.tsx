@@ -9,8 +9,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <nav className="md:flex md:justify-between md:items-center">
+    <header>
+      <nav className="flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="flex justify-between items-center">
           <div>
             <Link href="/" className="font-bold">Your Logo</Link>
@@ -32,15 +32,15 @@ export default function Header() {
             </div>
           </div>
 
-          <div className={`md:block ${isOpen ? 'block' : 'hidden'}`}>
+          <div className={`${isOpen ? 'block w-screen h-screen' : 'hidden'} md:flex md:flex-row md:space-x-4`}>
           <Link href="/" className={styles.navlink}>home</Link>
-          <Link href="/blog" className={styles.navlink}>blog</Link>
+          <Link href="/blog"className={styles.navlink}>blog</Link>
           <Link href="/works" className={styles.navlink}>works</Link>
           <Link href="/kits" className={styles.navlink}>kits</Link>
           <Link href="/contact" className={styles.navlink}>contact</Link>
           <Link href="/about" className={styles.navlink}>about me(r)</Link>
           </div>
         </nav>
-      </div>
+      </header>
     );
 }
