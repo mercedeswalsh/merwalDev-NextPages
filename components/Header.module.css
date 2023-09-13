@@ -1,0 +1,54 @@
+.navlink {
+	background: #E46082;
+	color: #fff;
+	overflow: hidden;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+.navlink:focus {
+	outline: none;
+}
+.navlink > span {
+	vertical-align: middle;
+}
+.navlink::before,
+.navlink::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 100%;
+	left: 0;
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.navlink::before {
+	background: #C2526F;
+}
+.navlink::after {
+	background: #AA3C59;
+}
+.navlink:hover {
+	color: #fff;
+}
+.navlink:hover::before,
+.navlink:hover::after {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.navlink:hover::after {
+	-webkit-transition-delay: 0.175s;
+	transition-delay: 0.175s;
+}
