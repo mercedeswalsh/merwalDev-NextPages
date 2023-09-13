@@ -33,12 +33,12 @@ export default function Header() {
           </div>
 
           <div className={`md:block ${isOpen ? 'block' : 'hidden'}`}>
-          <Link href="/"><a className="mx-2">home</a></Link>
-          <Link href="/blog"><a className="mx-2">blog</a></Link>
-          <Link href="/works"><a className="mx-2">works</a></Link>
-          <Link href="/kits"><a className="mx-2">kits</a></Link>
-          <Link href="/contact"><a className="mx-2">contact</a></Link>
-          <Link href="/about"><a className="mx-2">about me(r)</a></Link>
+          <Link href="/"><a className="mx-2 navlink">home</a></Link>
+          <Link href="/blog"><a className="mx-2 navlink">blog</a></Link>
+          <Link href="/works"><a className="mx-2 navlink">works</a></Link>
+          <Link href="/kits"><a className="mx-2 navlink">kits</a></Link>
+          <Link href="/contact"><a className="mx-2 navlink">contact</a></Link>
+          <Link href="/about"><a className="mx-2 navlink">about me(r)</a></Link>
           </div>
         </nav>
       </header>
