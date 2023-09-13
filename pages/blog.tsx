@@ -1,11 +1,11 @@
-import * as works from "lib/works.data"
 import Header from "components/Header"
+import * as blog from "../lib/demo.data"
 
-export default function Works() {
+export default function Blog() {
     return (
         <>
         <Header></Header>
-            <h1>{works.title}</h1>
+            <h1>{blog.title}</h1>
         </>
     )
 }
