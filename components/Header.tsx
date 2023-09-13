@@ -1,4 +1,5 @@
 import './Header.module.css'
+import Hamburger from './Hamburger';
 
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link';
@@ -17,16 +18,16 @@ export default function Header() {
 
           <div className="md:hidden">
             <button type="button" onClick={() => setIsOpen(!isOpen)}>
-              <svg viewBox="0 0 20 20" fill="#000000">
+          
                 {isOpen ? (
                   // This is an "X" icon
-                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  <>
+                  </>
                 ) : (
 
                     // This is a "hamburger" icon
-                    <path fillRule="evenodd" d="M4 5a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zm0 6a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zm0 6a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1z" clipRule="evenodd" />
+                    <Hamburger />
                 )}
-                </svg>
               </button>
             </div>
           </div>
