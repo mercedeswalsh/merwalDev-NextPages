@@ -1,5 +1,5 @@
-import './Header.module.css'
-import Hamburger from './Hamburger';
+import styles from './Header.module.css'
+import Hamburger from './Hamburger'
 
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link';
@@ -33,12 +33,12 @@ export default function Header() {
           </div>
 
           <div className={`md:block ${isOpen ? 'block' : 'hidden'}`}>
-          <Link href="/"><a className="mx-2 navlink">home</a></Link>
-          <Link href="/blog"><a className="mx-2 navlink">blog</a></Link>
-          <Link href="/works"><a className="mx-2 navlink">works</a></Link>
-          <Link href="/kits"><a className="mx-2 navlink">kits</a></Link>
-          <Link href="/contact"><a className="mx-2 navlink">contact</a></Link>
-          <Link href="/about"><a className="mx-2 navlink">about me(r)</a></Link>
+          <Link href="/"><a className={styles.navlink}>home</a></Link>
+          <Link href="/blog"><a className={styles.navlink}>blog</a></Link>
+          <Link href="/works"><a className={styles.navlink}>works</a></Link>
+          <Link href="/kits"><a className={styles.navlink}>kits</a></Link>
+          <Link href="/contact"><a className={styles.navlink}>contact</a></Link>
+          <Link href="/about"><a className={styles.navlink}>about me(r)</a></Link>
           </div>
         </nav>
       </header>
