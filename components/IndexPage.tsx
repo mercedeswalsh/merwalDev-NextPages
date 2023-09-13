@@ -1,12 +1,14 @@
 import Container from 'components/BlogContainer'
-import Header from 'components/Header'
 import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
+import Header from 'components/Header'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
+
+import styles from './Home.module.css'
 
 export interface IndexPageProps {
   preview?: boolean
@@ -23,10 +25,40 @@ export default function IndexPage(props: IndexPageProps) {
   return (
     <>
     <Header />
-      <IndexPageHead settings={settings} />
+     <IndexPageHead settings={settings} />
 
       <Layout preview={preview} loading={loading}>
         <Container>
+          
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 p-4">
+            <p className={styles.intro}>
+              hiya! i am &rarr;
+            </p>
+            <h1 className={styles.heading}>
+              mercedes walsh
+            </h1>
+            <h2 className={styles.subheading}>
+              a curious, creative gal that runs off of Dr. Pepper + chaos***
+            </h2>
+          </div>
+          <div className="w-full md:w-1/2 p-4">
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 p-4">
+            <h2 className={styles.intro}>
+              check out my &rarr;
+            </h2>
+          </div>
+          <div className="w-full md:w-1/2 p-4">
+            <h2 className={styles.intro}>
+              what i am doing &rarr;
+            </h2>
+          </div>
+        </div>
+
           <BlogHeader title={title} description={description} level={1} />
           {heroPost && (
             <HeroPost
