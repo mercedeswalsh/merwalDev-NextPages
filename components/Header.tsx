@@ -1,46 +1,45 @@
-import styles from './Header.module.css'
-import Hamburger from './Hamburger'
-
-import { PortableText } from '@portabletext/react'
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+
+import styles from './Header.module.css';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
-    <header>
-      <nav className="flex flex-col md:flex-row md:justify-between md:items-center">
-        <div className="flex justify-between items-center">
-          <div>
-            <Link href="/" className="font-bold">Your Logo</Link>
-          </div>
-
-          <div className="md:hidden">
-            <button type="button" onClick={() => setIsOpen(!isOpen)}>
+    <div className={`${styles.header} color-theme-1`}>
+      <Link href="/" className={styles.logo}>mercedes walsh</Link>
+      <ul className={styles.navlink}>
+        <li>
+          <Link href="/" className={router.pathname === '/' ? `${styles.active}` : ''}>
+            home
+          </Link>
+        </li>
           
-                {isOpen ? (
-                  // This is an "X" icon
-                  <>
-                  </>
-                ) : (
-
-                    // This is a "hamburger" icon
-                    <Hamburger />
-                )}
-              </button>
-            </div>
-          </div>
-
-          <div className={`${isOpen ? 'block w-screen h-screen' : 'hidden'} md:flex md:flex-row md:space-x-4`}>
-          <Link href="/" className={styles.navlink}>home</Link>
-          <Link href="/blog"className={styles.navlink}>blog</Link>
-          <Link href="/works" className={styles.navlink}>works</Link>
-          <Link href="/kits" className={styles.navlink}>kits</Link>
-          <Link href="/contact" className={styles.navlink}>contact</Link>
-          <Link href="/about" className={styles.navlink}>about me(r)</Link>
-          </div>
-        </nav>
-      </header>
-    );
+        
+        <li>
+        <Link href="/blog" className={router.pathname === '/blog' ? `${styles.active}` : ''}>
+            blog
+          </Link>  
+        </li>
+        
+        
+        <li>
+          <Link href="/works" className={router.pathname === '/works' ? `${styles.active}` : ''}>
+            works
+          </Link>
+        </li>
+        <li>
+        <Link href="/kits" className={router.pathname === '/kits' ? `${styles.active}` : ''}>
+            kits
+          </Link>
+        </li>
+        <li>
+          <Link href="/about" className={router.pathname === '/about' ? `${styles.active}` : ''}>
+            about me(r)
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
 }

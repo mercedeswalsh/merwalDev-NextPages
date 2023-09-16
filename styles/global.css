@@ -1,10 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Source+Code+Pro:wght@200;900&family=Spectral&display=swap');
+
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fecedc;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-  }
+    font-family: 'Spectral', serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    font-family: 'Calistoga', cursive;
+}
+
+h1, .h1 {
+    font-size: 72px;
+    line-height: 84px;
+    margin-bottom: 18px;
+    @media (max-width: 768px) {
+        font-size: 48px;
+        line-height: 54px;
+        margin-bottom: 12px;
+    }
+}
+
+h2, .h2 {
+    font-size: 60px;
+    line-height: 72px;
+    @media (max-width: 768px) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+h3, .h3 {
+    font-size: 48px;
+    line-height: 54px;
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+h4, .h4 {
+    font-size: 36px;
+    line-height: 44px;
+    @media (max-width: 768px) {
+        font-size: 21px;
+        line-height: 28px;
+    }
+}
+
+h5, .h5 {
+    font-size: 24px;
+    line-height: 30px;
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+p, .p {
+    font-size: 21px;
+    line-height: 28px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
+blockquote, .blockquote {
+    font-size: 36px;
+    line-height: 44px;
+    @media (max-width: 768px) {
+        font-size: 21px;
+        line-height: 28px;
+    }
+}
+
+.small-text {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+
+p, blockquote, .p, .blockquote {
+    font-family: 'Spectral', serif;
+}
+
+.monospace-light {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 200;
+}
+
+.monospace-dark {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+}
+
+/* #2E324D :: dark blue */
+/* #34667F :: blue */
+/* #B25534 :: brown */
+/* #EEDBB1 :: tan */
+/* #E5E0E6 :: grey */
+
+/* #fe9bb2 :: light pink */
+/* #f63f75 :: pink */
+/* #00e4a7 :: light green */
+/* #ffc661 :: light yellow */
+/* #726d6a :: grey */
+
+
+
+.color-theme-1 {
+    background: #fe9bb2;
+    color: #f63f75;
+}
+
+.color-theme-1 .button {
+    background: rgba(238, 219, 177, 0);
+    color: rgba(238, 219, 177, 1);
+    line-height: 64px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    border-radius: 32px;
+    padding: 0 24px;
+    margin: 48px 0 0;
+    border: 0;
+    position: relative;
+    font-size: 18px;
+    box-shadow: rgba(0,0,0,0.2) 0 2px 36px;
+    transition: 0.5s all ease-in-out;
+    border: 1px solid rgba(238, 219, 177, 1);
+}
+
+
+.color-theme-1 .button:hover {
+    color: #2E324D;
+    background: rgba(238, 219, 177, 1);
+    box-shadow: 0 16px 54px rgba(0,0,0,.6);
+
+}
+
+
+.color-theme-1-inverted {
+    background: #EEDBB1;
+    color: #2E324D;
+}
+
+.color-theme-2 {
+    background: #34667F;
+    color: #E5E0E6;
+}
+
+.color-theme-2-inverted {
+    background: #E5E0E6;
+    color: #34667F;
+}
+
+.color-theme-3 {
+    background: #B25534;
+    color: #EEDBB1;
+}
+
+.color-theme-3-inverted {
+    background: #B25534;
+    color: #EEDBB1;
+}
+
+.color-theme-4 {
+    background: #2E324D;
+    color: #E5E0E6;
+}
+
+.color-theme-4-inverted {
+    background: #E5E0E6;
+    color: #2E324D;
+}
+
+.mw-container {
+    width: 100vw;
+    padding: 138px 48px;
+    @media (max-width: 768px) {
+        font-size:18px;
+        padding-left:24px;padding-bottom:92px;padding-right:24px;padding-top:92px}
+}

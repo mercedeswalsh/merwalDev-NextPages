@@ -1,16 +1,11 @@
-export default function Footer() {
+import Link from 'next/link';
 
-return (
-    <div className="flex flex-col md:flex-row">
-    <div className="w-full md:w-1/3 p-4">
-        <img />
-    </div>
-    <div className="w-full md:w-1/3 p-4">
-        <p>**coffee shop talk :** <a>*hallo@merwal.dev*</a></p>
-    </div>
-    <div className="w-full md:w-1/3 p-4">
-        <p>business inquiries : <a>biz@merwal.dev</a></p>
-    </div>
-    </div>
-)
+import styles from './footer.module.css'
+
+export default function Footer () {
+    return (
+        <div className={`color-theme-1 ${styles.footer}`}>
+            <Link href="/" className={styles.logo}>mercedes walsh</Link>
+        </div>
+    )
 }

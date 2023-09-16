@@ -1,6 +1,5 @@
 import Container from 'components/BlogContainer'
-import Header from 'components/Header'
-import BlogHeader from 'components/BlogHeader'
+import BlogHeader from 'components/BlogHeader' // 
 import Layout from 'components/BlogLayout'
 import MoreStories from 'components/MoreStories'
 import PostBody from 'components/PostBody'
@@ -34,7 +33,6 @@ export default function PostPage(props: PostPageProps) {
 
   return (
     <>
-    <Header />
       <PostPageHead settings={settings} post={post} />
 
       <Layout preview={preview} loading={loading}>

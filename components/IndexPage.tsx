@@ -1,7 +1,6 @@
 import Container from 'components/BlogContainer'
 import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
-import Header from 'components/Header'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
@@ -24,7 +23,6 @@ export default function IndexPage(props: IndexPageProps) {
 
   return (
     <>
-    <Header />
      <IndexPageHead settings={settings} />
 
       <Layout preview={preview} loading={loading}>

@@ -18,10 +18,10 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
 
   return (
     <Head>
-      <title>{title}</title>
+      <title>mercedes walsh</title>
       <BlogMeta />
       <meta
-        key="description"
+        key="descripton"
         name="description"
         content={toPlainText(description)}
       />
